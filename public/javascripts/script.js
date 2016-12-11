@@ -8,13 +8,16 @@ function calc_goal () {
   console.log(percent);
   console.log(typeof(amt));
   console.log(typeof(percent));
+  console.log(percent < 0);
   if(percent < 0 || percent > 100){
     document.getElementById('goal').innerHTML = "Sorry, you can't save less than 0% or higher than 100%! You also can't start out with a negative amount!";
   }
-  if(amt < 0){
+  else if(amt < 0){
     document.getElementById('goal').innerHTML = "You also can't start out with a negative amount!";
   }
-  document.getElementById('goal').innerHTML = "In order to save " + percent + "% of your initial amount, you need to save $" + (amt * (percent/100));
+  else {
+    document.getElementById('goal').innerHTML = "In order to save " + percent + "% of your initial amount, you need to save $" + (amt * (percent/100));
+  }
 }
 
 
