@@ -3,12 +3,6 @@
 function calc_goal () {
   var amt = parseInt(document.getElementById('InitAmount').value);
   var percent = parseInt(document.getElementById('Percent').value);
-  console.log("Hello World");
-  console.log(amt);
-  console.log(percent);
-  console.log(typeof(amt));
-  console.log(typeof(percent));
-  console.log(percent < 0);
   if(percent < 0 || percent > 100){
     document.getElementById('goal').innerHTML = "Sorry, you can't save less than 0% or higher than 100%! You also can't start out with a negative amount!";
   }
